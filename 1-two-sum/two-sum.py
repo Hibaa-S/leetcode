@@ -1,8 +1,7 @@
-class Solution: 
-    def twoSum(self,nums,target):
-        num_dic={}
-        for i,num in enumerate(nums):
-            if target - num in num_dic:
-                return([num_dic[target - num],i])
-            num_dic[num]=i
-        
+class Solution:
+   def twoSum(self, nums, target):
+
+        for i in range(len(nums)-1):
+            for j in range(i+1, len(nums)):
+                if nums[i] + nums[j] == target:
+                    return([i, j])
